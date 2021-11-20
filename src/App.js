@@ -3,6 +3,7 @@ import './App.css';
 import Greet from './components/Greet';
 import Message from './components/Message';
 import Button from './components/Button';
+import Hello from './components/Hello';
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload. -benito
         </p>
-        <Greet name="Benito" heroname="Male">
+       
+        <Greet name={Hello()} heroname="Male">
           <Message/>
         </Greet>
 
