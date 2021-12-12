@@ -12,6 +12,7 @@ const Router = () => { //used for routing, exact path is the url, element is the
             <BrowserRouter>
                 <Routes>
                     <Route exact path="/myfirstreact" element = {<Home/>}/>
+                    <Route exact path="/myfirstreact/" element = {<Home/>}/>
                     <Route exact path="*" element = {<PageNotFound/>}/>
                     <Route exact path = "/Emp" element = {<Emp/>}/>
                     <Route exact path = "/AddEmp" element = {<AddEmp/>}/>
