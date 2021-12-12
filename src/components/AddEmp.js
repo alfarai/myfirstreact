@@ -28,6 +28,7 @@ const AddEmp = () =>{
         e.preventDefault(); //prevents refreshing
         const employee = {id,name,location,department}
         if(id){//update (put)
+            console.log(id);
             empService.putEmployee(employee)
             .then(response => {
                 console.log("Employee updated");
@@ -49,7 +50,9 @@ const AddEmp = () =>{
     This is an incomplete process. The goal was if we were to update an employee, it would be more convenient to already show the existing data
     to their respective input fields in /AddEmp page. This useEffect successfully retrieves the data to be updated, but doesn't put it into the 3 input
     fields, which might need mapping(?) or changing their value attributes(?)
-    */
+
+    *if you uncomment this, the PUT will break. It will say that it updated, but it hasn't actually updated, could be because its updating with using the same values present (?)
+    
     useEffect(
         ()=>{
             if(id){
@@ -69,6 +72,7 @@ const AddEmp = () =>{
             }
         }
     )
+    */
     
     return(
         <div className ="container">
